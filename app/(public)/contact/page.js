@@ -1,0 +1,40 @@
+"use client";
+
+import { Bebas_Neue } from "next/font/google";
+import { useEffect, useRef } from "react";
+import ContactHero from "../../components/ContactHero";
+import ContactContent from "../../components/ContactContent";
+
+const bebas = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
+
+export default function ContactPage() {
+    const hiddenElementsRef = useRef([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("preview_show");
+                } else {
+                    entry.target.classList.remove("preview_show");
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll(".preview_hidden");
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        return () => {
+            observer.disconnect();
+        };
+    }, [hiddenElementsRef.current]);
+
+    return (
+        <main
+            className={`flex flex-col items-center justify-center overflow-x-hidden ${bebas.className}`}
+        >
+            <ContactHero />
+            <ContactContent />
+        </main>
+    );
+}
