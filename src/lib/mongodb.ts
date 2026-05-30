@@ -1,3 +1,4 @@
+import dns from "dns";
 import mongoose from "mongoose";
 
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -6,6 +7,14 @@ if (!MONGODB_URI) {
   throw new Error(
     "Please define the MONGODB_URI environment variable inside .env.local"
   );
+}
+
+if (MONGODB_URI.startsWith("mongodb+srv://")) {
+  console.warn(
+    "MongoDB SRV connection detected. Overriding DNS servers to Cloudflare and Google for SRV resolution."
+  );
+  dns.setServers(["1.1.1.1", "8.8.8.8"]);
+}
 }
 
 // At this point, TypeScript knows MONGODB_URI is defined
