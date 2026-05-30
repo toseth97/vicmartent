@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import {
-  FaFileAlt,
+  FaFile,
   FaEye,
   FaEnvelope,
   FaPhone,
-  FaMapMarkerAlt,
+  FaMapMarker,
   FaBriefcase,
   FaTimes,
   FaFilter,
@@ -191,7 +191,7 @@ export default function AdminApplicationsPage() {
             ))
           ) : (
             <div className="bg-white rounded-xl p-12 text-center shadow-sm border border-gray-100">
-              <FaFileAlt className="w-12 h-12 text-gray-300 mx-auto mb-3" />
+              <FaFile className="w-12 h-12 text-gray-300 mx-auto mb-3" />
               <h3 className="text-lg font-bebas text-primary tracking-wide mb-1">
                 No Applications
               </h3>
@@ -239,7 +239,7 @@ export default function AdminApplicationsPage() {
                   </div>
                   {(selectedApp.country || selectedApp.state) && (
                     <div className="flex items-center gap-2 text-gray-600">
-                      <FaMapMarkerAlt className="w-3.5 h-3.5 text-gray-400" />
+                      <FaMapMarker className="w-3.5 h-3.5 text-gray-400" />
                       {[selectedApp.state, selectedApp.country].filter(Boolean).join(", ")}
                     </div>
                   )}

@@ -16,15 +16,39 @@ export default function Jobs() {
         fetchJobs();
     }, []);
 
+    const parseJobsResponse = (data) => {
+        if (Array.isArray(data)) return data;
+        if (data?.jobs && Array.isArray(data.jobs)) return data.jobs;
+        if (data?.data && Array.isArray(data.data)) return data.data;
+        console.warn("Unexpected jobs response:", data);
+        return [];
+    };
+
     const fetchJobs = async () => {
         try {
             const res = await fetch("/api/jobs");
-            if (res.ok) {
-                const data = await res.json();
-                setJobs(data.filter((job) => job.isActive));
+            if (!res.ok) {
+                const text = await res.text();
+                console.error(
+                    "Failed to fetch jobs: status",
+                    res.status,
+                    text,
+                );
+                return;
             }
+
+            const contentType = res.headers.get("content-type") || "";
+            const data = contentType.includes("application/json")
+                ? await res.json()
+                : JSON.parse(await res.text());
+
+            setJobs(parseJobsResponse(data).filter((job) => job.isActive));
         } catch (error) {
-            console.error("Failed to fetch jobs:", error);
+            console.error(
+                "Failed to fetch jobs:",
+                error?.message || error,
+                error,
+            );
         } finally {
             setLoading(false);
         }

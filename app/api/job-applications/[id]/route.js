@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import dbConnect from "@/lib/mongodb";
-import JobApplication from "@/models/JobApplication";
+import JobApplication from "../../../../models/JobApplication";
 import { authOptions } from "../../auth/[...nextauth]/route";
 
 export async function GET(request, { params }) {

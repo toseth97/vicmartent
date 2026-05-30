@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import dbConnect from "@/lib/mongodb";
-import Job from "@/models/Job";
+import Job from "../../../models/Job";
 import { authOptions } from "../auth/[...nextauth]/route";
 
 export async function GET() {
@@ -19,10 +19,12 @@ export async function GET() {
 
         const jobs = await Job.find().sort({ createdAt: -1 });
 
-        return NextResponse.json(jobs);
+        const jobsData = jobs.map((job) => job.toObject());
+        return NextResponse.json(jobsData);
     } catch (error) {
+        console.error("[api/jobs GET] failed:", error);
         return NextResponse.json(
-            { error: "Failed to fetch jobs" },
+            { error: "Failed to fetch jobs", details: error?.message || String(error) },
             { status: 500 },
         );
     }

@@ -9,10 +9,36 @@ const bebas = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 export default function Careers() {
     const [jobs, setJobs] = useState([]);
 
+    const parseJobsResponse = (data) => {
+        if (Array.isArray(data)) return data;
+        if (data?.jobs && Array.isArray(data.jobs)) return data.jobs;
+        if (data?.data && Array.isArray(data.data)) return data.data;
+        console.warn("Unexpected jobs response:", data);
+        return [];
+    };
+
     useEffect(() => {
         fetch("/api/jobs")
-            .then((res) => res.json())
-            .then((data) => setJobs(data.filter((job) => job.isActive)));
+            .then(async (res) => {
+                if (!res.ok) {
+                    const text = await res.text();
+                    console.error("Failed to load jobs: status", res.status, text);
+                    return [];
+                }
+                const contentType = res.headers.get("content-type") || "";
+                return contentType.includes("application/json")
+                    ? res.json()
+                    : JSON.parse(await res.text());
+            })
+            .then((data) => setJobs(parseJobsResponse(data).filter((job) => job.isActive)))
+            .catch((error) => {
+                console.error(
+                    "Failed to load jobs:",
+                    error?.message || error,
+                    error,
+                );
+                setJobs([]);
+            });
     }, []);
     const hiddenElementsRef = useRef([]); // Use useRef for element references
 
