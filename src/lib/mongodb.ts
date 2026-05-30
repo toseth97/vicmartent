@@ -15,7 +15,6 @@ if (MONGODB_URI.startsWith("mongodb+srv://")) {
   );
   dns.setServers(["1.1.1.1", "8.8.8.8"]);
 }
-}
 
 // At this point, TypeScript knows MONGODB_URI is defined
 const DB_URI: string = MONGODB_URI;
