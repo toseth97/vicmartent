@@ -2,232 +2,173 @@
 
 import React from "react";
 import Image from "next/image";
-import Logo from "../assets/images/Logo.png";
 import Link from "next/link";
 import { GoDotFill } from "react-icons/go";
-import { FaXTwitter, FaLocationDot } from "react-icons/fa6";
 import {
-    FaLinkedinIn,
-    FaFacebookF,
-    FaInstagram,
-    FaChevronRight,
-    FaPhone,
-    FaEnvelope,
-} from "react-icons/fa";
+  FaXTwitter,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa6";
+import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 import { Poppins } from "next/font/google";
 
+import Logo from "../assets/images/Logo.png";
+
 const poppins = Poppins({
-    subsets: ["latin"],
-    weight: ["200", "300", "400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
 const Footer = () => {
-    const current_year = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 
-    return (
-        <footer className={`bg-gray-800 text-white  ${poppins.className}`}>
-            {/* Main Footer Content */}
-            <div className="container mx-auto px-4 py-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {/* Company Info & Social Links */}
-                    <div className="lg:col-span-1">
-                        <div className="mb-6">
-                            <div className="flex items-center gap-3 mb-4">
-                                <div>
-                                    <Image
-                                        src={Logo}
-                                        height={150}
-                                        width={150}
-                                        alt="Vicmart Enterprise"
-                                    />
-                                </div>
-                            </div>
-                            <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                                An indigenous firm involved in the marketing and
-                                sales of FMCG (fast moving consumer goods) and
-                                other allied products to meet the needs of our
-                                customers.
-                            </p>
-                        </div>
+  const usefulLinks = [
+    { href: "/about", label: "About Us" },
+    { href: "/products", label: "Products" },
+    { href: "/careers", label: "Careers" },
+    { href: "/press", label: "Press" },
+    { href: "/contact", label: "Contact" },
+  ];
 
-                        {/* Social Media Links */}
-                        <div className="flex space-x-3">
-                            <a
-                                href="#"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-10 h-10 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white hover:text-indigo-950 transition-all duration-300 hover:scale-110"
-                                aria-label="Twitter"
-                            >
-                                <FaXTwitter className="w-4 h-4" />
-                            </a>
-                            <a
-                                href="#"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-10 h-10 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white hover:text-indigo-950 transition-all duration-300 hover:scale-110"
-                                aria-label="Facebook"
-                            >
-                                <FaFacebookF className="w-4 h-4" />
-                            </a>
-                            <a
-                                href="#"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-10 h-10 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white hover:text-indigo-950 transition-all duration-300 hover:scale-110"
-                                aria-label="Instagram"
-                            >
-                                <FaInstagram className="w-4 h-4" />
-                            </a>
-                            <a
-                                href="#"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-10 h-10 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white hover:text-indigo-950 transition-all duration-300 hover:scale-110"
-                                aria-label="LinkedIn"
-                            >
-                                <FaLinkedinIn className="w-4 h-4" />
-                            </a>
-                        </div>
-                    </div>
+  return (
+    <footer className={`bg-gray-900 text-white ${poppins.className}`}>
+      <div className="container mx-auto px-4 py-14">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+          
+          {/* Brand */}
+          <div className="space-y-5">
+            <div className="flex items-center gap-3">
+              <div className="relative h-14 w-14 overflow-hidden rounded-xl bg-white/5 p-1">
+                <Image
+                  src={Logo}
+                  alt="Vicmart Enterprises"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
 
-                    {/* Useful Links */}
-                    <div>
-                        <p className="text-lg font-bold mb-6 text-white">
-                            Useful Links
-                        </p>
-                        <ul className="space-y-3">
-                            <li>
-                                <Link
-                                    href="/about"
-                                    className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
-                                >
-                                    <FaChevronRight className="w-3 h-3 mr-2 text-gray-400 group-hover:text-white transition-colors" />
-                                    About Us
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/products"
-                                    className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
-                                >
-                                    <FaChevronRight className="w-3 h-3 mr-2 text-gray-400 group-hover:text-white transition-colors" />
-                                    Products
-                                </Link>
-                            </li>
-
-                            <li>
-                                <Link
-                                    href="/careers"
-                                    className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
-                                >
-                                    <FaChevronRight className="w-3 h-3 mr-2 text-gray-400 group-hover:text-white transition-colors" />
-                                    Careers
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/press"
-                                    className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
-                                >
-                                    <FaChevronRight className="w-3 h-3 mr-2 text-gray-400 group-hover:text-white transition-colors" />
-                                    Press
-                                </Link>
-                            </li>
-
-                            <li>
-                                <Link
-                                    href="/contact"
-                                    className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
-                                >
-                                    <FaChevronRight className="w-3 h-3 mr-2 text-gray-400 group-hover:text-white transition-colors" />
-                                    Contact
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Our Branches */}
-                    {/* <div>
-                        <p className="text-lg font-bold mb-6 text-white">
-                            Our Branches
-                        </p>
-                        <div className="grid grid-cols-2 gap-2">
-                            {[
-                                "Lagos",
-                                "Ibadan",
-                                "Onitsha",
-                                "Enugu",
-                                "Benin",
-                                "Port Harcourt",
-                                "Kano",
-                                "Abuja",
-                            ].map((branch, index) => (
-                                <div
-                                    key={index}
-                                    className="flex items-center text-gray-300"
-                                >
-                                    <GoDotFill className="w-3 h-3 mr-2 text-indigo-400 flex-shrink-0" />
-                                    <span className="text-sm">{branch}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div> */}
-
-                    {/* Contact Information */}
-                    <div>
-                        <p className="text-lg font-bold mb-6 text-white">
-                            Contact Us
-                        </p>
-                        <div className="space-y-4">
-                            <div className="flex items-start space-x-3">
-                                <FaLocationDot className="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" />
-                                <div className="text-gray-300 text-sm">
-                                    <p>Block C, Plot 2, Oluyole Extension,</p>
-                                    <p>Oluyole, Ibadan.</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center space-x-3">
-                                <FaPhone className="w-4 h-4 text-gray-400 flex-shrink-0" />
-                                <a
-                                    href="tel:+2348055096909"
-                                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                                >
-                                    +234-80-5509-6909
-                                </a>
-                            </div>
-
-                            <div className="flex items-center space-x-3">
-                                <FaEnvelope className="w-4 h-4 text-gray-400 flex-shrink-0" />
-                                <a
-                                    href="mailto:enquiries@vicmartent.com"
-                                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                                >
-                                    enquiries@vicmartent.com
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+              <div>
+                <div className="text-lg font-bold tracking-wide">VICMART</div>
+                <div className="text-xs uppercase tracking-widest text-white/60">
+                  Enterprises Limited
                 </div>
+              </div>
             </div>
 
-            {/* Bottom Footer */}
-            <div className="border-t border-gray-700">
-                <div className="container mx-auto px-4 py-6">
-                    <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                        <div className="text-gray-300 text-sm w-full text-center">
-                            © {current_year}{" "}
-                            <span className="font-semibold text-white">
-                                Vicmart Enterprises Limited
-                            </span>
-                            . All Rights Reserved.
-                        </div>
-                    </div>
-                </div>
+            <p className="text-sm leading-relaxed text-white/70">
+              An indigenous firm involved in the marketing and sales of FMCG
+              (fast moving consumer goods) and other allied products to meet
+              the needs of our customers.
+            </p>
+
+            {/* Socials */}
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <a
+                href="#"
+                aria-label="Twitter"
+                className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 transition"
+              >
+                <FaXTwitter className="h-4 w-4" />
+              </a>
+
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 transition"
+              >
+                <FaFacebookF className="h-4 w-4" />
+              </a>
+
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 transition"
+              >
+                <FaInstagram className="h-4 w-4" />
+              </a>
+
+              <a
+                href="#"
+                aria-label="LinkedIn"
+                className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 transition"
+              >
+                <FaLinkedin className="h-4 w-4" />
+              </a>
             </div>
-        </footer>
-    );
+          </div>
+
+          {/* Useful Links */}
+          <div className="space-y-4">
+            <div className="text-sm font-semibold text-white/90">
+              Useful Links
+            </div>
+
+            <ul className="space-y-3">
+              {usefulLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="group inline-flex items-center gap-2 text-sm text-white/70 hover:text-white transition"
+                  >
+                    <GoDotFill className="h-2.5 w-2.5 text-[#c8a45e] group-hover:translate-x-0.5 transition" />
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div className="space-y-4">
+            <div className="text-sm font-semibold text-white/90">
+              Contact Us
+            </div>
+
+            <div className="space-y-4 text-sm text-white/70">
+              <div className="flex items-start gap-3">
+                <MdLocationOn className="h-5 w-5 mt-0.5 text-[#c8a45e]" />
+                <div>
+                  <div>Block C, Plot 2, Oluyole Extension,</div>
+                  <div>Oluyole, Ibadan.</div>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <MdPhone className="h-4 w-4 text-[#c8a45e]" />
+                <a
+                  href="tel:+2348055096909"
+                  className="hover:text-white transition"
+                >
+                  +234-80-5509-6909
+                </a>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <MdEmail className="h-4 w-4 text-[#c8a45e]" />
+                <a
+                  href="mailto:enquiries@vicmartent.com"
+                  className="hover:text-white transition"
+                >
+                  enquiries@vicmartent.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom */}
+        <div className="mt-12 border-t border-white/10 pt-6">
+          <div className="text-center text-xs text-white/60 md:text-left">
+            © {currentYear}{" "}
+            <span className="text-white/90">Vicmart Enterprises Limited</span>.
+            All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

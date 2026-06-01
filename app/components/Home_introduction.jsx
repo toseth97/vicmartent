@@ -3,11 +3,10 @@ import { Poppins } from "next/font/google";
 import React from "react";
 import ForkLift from "../assets/images/forklift.jpg";
 import Distribution from "../assets/images/distribution.webp";
-import Manufacture from "../assets/images/manufacture.webp";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FaLink } from "react-icons/fa6";
+import { MdOpenInNew as FaExternalLink } from "react-icons/md";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -148,7 +147,7 @@ const Home_introduction = () => {
                                         title="More Details"
                                         className="text-white"
                                     >
-                                        <FaLink className="text-6xl text-bold" />
+                                        <FaExternalLink className="text-6xl text-bold" />
                                     </Link>
                                 </div>
                             </div>
@@ -157,7 +156,7 @@ const Home_introduction = () => {
                     <p className="text-sm opacity-80 lg:text-center text-justify lg:p-16 p-6 bg-white text-indigo-950 preview_hidden">
                         Vicmart Enterprises Limited is a multi-faceted company
                         distributing products that touch the lives of our
-                        Nigerian consumers every day. Holding consumers'
+                        Holding consumers&apos;
                         commitment and loyalty is paramount for our long-term
                         success. We are committed to providing quality products
                         and responsive sales services that meet the evolving
