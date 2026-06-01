@@ -52,23 +52,21 @@ export default function ContactContent() {
                             <span className="mb-4 text-sm">
                                 <strong>Address:</strong>
                                 <br />
-                                <p> 13 Fatai Atere Way,</p>
-
-                                <p>Matori, Mushin, Lagos.</p>
-                                <br />
+                                 <div>Block C, Plot 2, Oluyole Extension,</div>
+                  <div>Oluyole, Ibadan.</div>
                             </span>
 
                             <span className="mb-4 text-sm">
                                 <strong>Email:</strong>
 
-                                <p>corporate@aavabrands.com</p>
+                                <p>enquiries@vicmartent.com</p>
                                 <br />
                             </span>
 
                             <span className="mb-4 text-sm">
                                 <strong>Phone:</strong>
 
-                                <p> +234 912 372 0447</p>
+                                <p> +234-80-5509-6909</p>
                                 <br />
                             </span>
                         </div>
@@ -143,7 +141,7 @@ export default function ContactContent() {
             </section> */}
 
             {/* Branches */}
-            <section className="py-16 bg-white">
+            {/* <section className="py-16 bg-white">
                 <div className="container mx-auto px-6">
                     <p className="text-2xl font-bold text-center mb-8">
                         Our Branches
@@ -191,7 +189,7 @@ export default function ContactContent() {
                         </ul>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </div>
     );
 }
