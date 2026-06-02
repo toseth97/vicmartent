@@ -43,17 +43,17 @@ const Home_introduction = () => {
                     <motion.div variants={itemVariants} className="space-y-6">
                         <div>
                             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-                                About Vicmart Enterprises
+                                About Adenola & Sons
                             </h2>
                             <div className="w-12 h-1 bg-gradient-to-r from-primary-600 to-primary-500 rounded-full"></div>
                         </div>
 
                         <div className="space-y-4 text-gray-700 leading-relaxed">
                             <p>
-                                Vicmart Enterprises Limited is an indigenous firm involved in the marketing and sales of FMCG (fast moving consumer goods) and other allied products to meet the needs of our customers.
+                                Adenola & Sons is an indigenous firm involved in the marketing and sales of FMCG (fast moving consumer goods) and other allied products to meet the needs of our customers.
                             </p>
                             <p>
-                                At Vicmart, we strive to create and sustain mutually profitable relationships between us and all our customers through our culture of providing quality products, responsive sales services, integrity, and an ample mix of human resources and technology.
+                                At Adenola & Sons, we strive to create and sustain mutually profitable relationships between us and all our customers through our culture of providing quality products, responsive sales services, integrity, and an ample mix of human resources and technology.
                             </p>
                             <p>
                                 With our multi-disciplinary team of young innovative personnel, we are poised to become one of the leading distribution firms in Nigeria.
@@ -78,7 +78,7 @@ const Home_introduction = () => {
                     >
                         <Image
                             src={ForkLift}
-                            alt="Vicmart Operations"
+                            alt="Adenola & Sons Operations"
                             className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-500"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
@@ -112,7 +112,7 @@ const Home_introduction = () => {
                     >
                         <div className="space-y-6">
                             <p className="text-gray-700 leading-relaxed text-lg">
-                                Vicmart Enterprises Limited is a multi-faceted company distributing products that touch the lives of our consumers. Customer commitment and loyalty is paramount for our long-term success. We are committed to providing quality products and responsive sales services that meet the evolving needs of our customers.
+                                Adenola & Sons is a multi-faceted company distributing products that touch the lives of our consumers. Customer commitment and loyalty is paramount for our long-term success. We are committed to providing quality products and responsive sales services that meet the evolving needs of our customers.
                             </p>
 
                             {/* Core Values Grid */}

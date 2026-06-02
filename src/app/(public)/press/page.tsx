@@ -94,7 +94,7 @@ export default function PressPage() {
             </h1>
             <p className="text-gray-200 max-w-2xl text-lg">
               Stay updated with the latest news, events, and announcements
-              from Vicmart Enterprises.
+              from Adenola & Sons.
             </p>
           </div>
         </div>
@@ -207,7 +207,7 @@ export default function PressPage() {
               <p className="text-gray-500 text-sm">
                 {searchTerm || activeCategory !== "all"
                   ? "Try adjusting your search or filter criteria."
-                  : "Check back soon for the latest news and updates from Vicmart Enterprises."}
+                  : "Check back soon for the latest news and updates from Adenola & Sons."}
               </p>
             </div>
           )}

@@ -28,14 +28,14 @@ const Footer = () => {
               <div className="relative w-12 h-12">
                 <Image
                   src="/assets/images/Logo.png"
-                  alt="Vicmart Enterprises"
+                  alt="Adenola & Sons"
                   fill
                   className="object-contain brightness-0 invert"
                 />
               </div>
               <div>
                 <h3 className="text-lg font-bold tracking-wider font-bebas">
-                  VICMART
+                  ADENOLA & SONS
                 </h3>
                 <span className="text-[10px] text-gray-400 tracking-widest uppercase">
                   Enterprises Limited
@@ -149,10 +149,10 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <FaEnvelope className="w-4 h-4 text-accent flex-shrink-0" />
                 <a
-                  href="mailto:enquiries@vicmartent.com"
+                  href="mailto:enquiries@adenolaandsons.com"
                   className="text-gray-300 hover:text-accent transition-colors text-sm"
                 >
-                  enquiries@vicmartent.com
+                  enquiries@adenolaandsons.com
                 </a>
               </div>
             </div>
@@ -167,7 +167,7 @@ const Footer = () => {
             <p className="text-gray-400 text-sm text-center md:text-left">
               © {currentYear}{" "}
               <span className="text-white font-medium">
-                Vicmart Enterprises Limited
+                Adenola & Sons
               </span>
               . All Rights Reserved.
             </p>

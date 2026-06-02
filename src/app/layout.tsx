@@ -6,11 +6,11 @@ import AuthProvider from "@/components/SessionProvider";
 import CookieConsent from "@/components/CookieConsent";
 
 export const metadata: Metadata = {
-  title: "Vicmart Enterprises Limited | FMCG Distribution in Nigeria",
+  title: "Adenola & Sons | FMCG Distribution in Nigeria",
   description:
-    "Vicmart Enterprises Limited is an indigenous firm involved in the marketing and sales of FMCG (fast moving consumer goods) and other allied products. We distribute superior products and services that improves the life of consumers.",
+    "Adenola & Sons is an indigenous firm involved in the marketing and sales of FMCG (fast moving consumer goods) and other allied products. We distribute superior products and services that improves the life of consumers.",
   keywords: [
-    "Vicmart",
+    "Adenola & Sons",
     "FMCG",
     "distribution",
     "Nigeria",
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     "supply chain",
     "manufacturing",
   ],
-  authors: [{ name: "Vicmart Enterprises Limited" }],
+  authors: [{ name: "Adenola & Sons" }],
   openGraph: {
-    title: "Vicmart Enterprises Limited",
+    title: "Adenola & Sons",
     description:
       "We distribute superior products and services that improves the life of consumers",
     type: "website",
     locale: "en_NG",
-    siteName: "Vicmart Enterprises Limited",
+    siteName: "Adenola & Sons",
   },
 };
 

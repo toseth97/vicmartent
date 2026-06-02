@@ -19,7 +19,7 @@ const DistributionContent = () => {
                     </h2>
                 </div>
                 <p className="text-center max-w-4xl mx-auto mb-16 text-gray-700 leading-relaxed">
-                    Vicmart Enterprises Limited is an indigenous firm involved in the marketing and sales of FMCG (fast moving consumer goods) and other allied products. With our multi-disciplinary team of young innovative personnel, we are poised to become one of the leading distribution firms in Nigeria. We provide all the essential distribution services and logistics support to help brands reach consumers effectively across our network.
+                    Adenola & Sons is an indigenous firm involved in the marketing and sales of FMCG (fast moving consumer goods) and other allied products. With our multi-disciplinary team of young innovative personnel, we are poised to become one of the leading distribution firms in Nigeria. We provide all the essential distribution services and logistics support to help brands reach consumers effectively across our network.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 portfolio-container">

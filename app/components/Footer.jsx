@@ -60,14 +60,14 @@ const Footer = () => {
               <div className="relative h-12 w-12 overflow-hidden rounded-lg bg-primary-600 p-1">
                 <Image
                   src={Logo}
-                  alt="Vicmart Enterprises"
+                  alt="Adenola & Sons"
                   fill
                   className="object-contain"
                   priority
                 />
               </div>
               <div>
-                <div className="text-lg font-bold text-white">VICMART</div>
+                <div className="text-lg font-bold text-white">ADENOLA & SONS</div>
                 <div className="text-xs text-white/60 font-semibold">ENTERPRISES</div>
               </div>
             </div>
@@ -193,10 +193,10 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <MdEmail className="h-5 w-5 text-primary-500 flex-shrink-0" />
                 <a
-                  href="mailto:enquiries@vicmartent.com"
+                  href="mailto:enquiries@adenolaandsons.com"
                   className="text-white/70 hover:text-white transition-colors duration-200"
                 >
-                  enquiries@vicmartent.com
+                  enquiries@adenolaandsons.com
                 </a>
               </div>
             </div>
@@ -209,7 +209,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 lg:px-8 py-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-white/60">
-              © {currentYear} <span className="text-white/90 font-semibold">Vicmart Enterprises Limited</span>. All Rights Reserved.
+              © {currentYear} <span className="text-white/90 font-semibold">Adenola & Sons</span>. All Rights Reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <Link href="#" className="text-white/60 hover:text-white transition-colors">

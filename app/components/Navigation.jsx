@@ -59,12 +59,12 @@ const Navigation = () => {
                             src={Logo}
                             height={40}
                             width={40}
-                            alt="Vicmart Enterprises"
+                            alt="Adenola & Sons"
                             className="w-full h-full object-contain"
                         />
                     </div>
                     <div className="hidden sm:block">
-                        <div className="text-sm font-bold text-primary-900">VICMART</div>
+                        <div className="text-sm font-bold text-primary-900">ADENOLA & SONS</div>
                         <div className="text-xs text-gray-600">Enterprises</div>
                     </div>
                 </Link>

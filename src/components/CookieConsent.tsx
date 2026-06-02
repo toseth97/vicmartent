@@ -7,7 +7,7 @@ export default function CookieConsent() {
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem("vicmart-cookie-consent");
+    const consent = localStorage.getItem("adenola-sons-cookie-consent");
     if (!consent) {
       // Show the banner after a short delay
       const timer = setTimeout(() => setShowBanner(true), 1500);
@@ -16,12 +16,12 @@ export default function CookieConsent() {
   }, []);
 
   const acceptCookies = () => {
-    localStorage.setItem("vicmart-cookie-consent", "accepted");
+    localStorage.setItem("adenola-sons-cookie-consent", "accepted");
     setShowBanner(false);
   };
 
   const declineCookies = () => {
-    localStorage.setItem("vicmart-cookie-consent", "declined");
+    localStorage.setItem("adenola-sons-cookie-consent", "declined");
     setShowBanner(false);
   };
 

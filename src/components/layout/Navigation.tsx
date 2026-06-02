@@ -63,7 +63,7 @@ const Navigation = () => {
             <div className="relative w-12 h-12 overflow-hidden rounded-lg transition-transform group-hover:scale-105">
               <Image
                 src="/assets/images/Logo.png"
-                alt="Vicmart Enterprises"
+                alt="Adenola & Sons"
                 fill
                 className="object-contain"
                 priority
@@ -71,7 +71,7 @@ const Navigation = () => {
             </div>
             <div className="hidden sm:block">
               <span className="text-lg font-bold text-primary tracking-wider font-bebas">
-                VICMART
+                ADENOLA & SONS
               </span>
               <span className="block text-[10px] text-gray-500 tracking-widest uppercase">
                 Enterprises Limited

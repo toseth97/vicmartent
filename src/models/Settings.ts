@@ -23,7 +23,7 @@ const SettingsSchema = new Schema<ISettings>(
   {
     siteName: {
       type: String,
-      default: "Vicmart Enterprises Limited",
+      default: "Adenola & Sons",
       trim: true,
     },
     tagline: {
@@ -49,7 +49,7 @@ const SettingsSchema = new Schema<ISettings>(
     },
     email: {
       type: String,
-      default: "enquiries@vicmartent.com",
+      default: "enquiries@adenolaandsons.com",
       trim: true,
     },
     twitterUrl: {

@@ -132,7 +132,7 @@ export default function DistributionPage() {
               </h2>
               <div className="section-divider mb-6" />
               <p className="text-gray-600 leading-relaxed mb-4">
-                At the heart of Vicmart Enterprises is a robust distribution
+                At the heart of Adenola & Sons is a robust distribution
                 network that spans the length and breadth of Nigeria. Our
                 logistics infrastructure connects world-class FMCG brands with
                 millions of Nigerian consumers through efficient and reliable

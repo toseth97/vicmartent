@@ -111,7 +111,7 @@ export default function ManufacturingPage() {
               </h2>
               <div className="section-divider mb-6" />
               <p className="text-gray-600 leading-relaxed mb-4">
-                Vicmart Enterprises operates modern manufacturing facilities
+                Adenola & Sons operates modern manufacturing facilities
                 that produce a range of consumer goods meeting the highest
                 international quality standards. Our manufacturing division
                 complements our distribution business, allowing us to offer

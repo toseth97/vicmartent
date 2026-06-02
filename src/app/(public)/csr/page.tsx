@@ -134,7 +134,7 @@ export default function CSRPage() {
               </h2>
               <div className="section-divider mb-6" />
               <p className="text-gray-600 leading-relaxed mb-4">
-                At Vicmart Enterprises, we believe that business success and
+                At Adenola & Sons, we believe that business success and
                 social responsibility go hand in hand. Our CSR initiatives are
                 not just corporate obligations — they are integral to who we are
                 and how we operate.

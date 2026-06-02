@@ -5,7 +5,7 @@ import CookieConsent from "./components/CookieConsent";
 import { SessionProvider } from "./components/SessionProvider";
 
 export const metadata = {
-    title: "VICMART ENTERPRISES - Premium Distribution Solutions",
+    title: "ADENOLA & SONS - Premium Distribution Solutions",
     description: "Leading distributor of FMCG and consumer goods in Nigeria. Quality products, responsive service, and trusted distribution networks.",
 };
 

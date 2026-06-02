@@ -90,7 +90,7 @@ export default function AdminLayout({
             <Link href="/admin/dashboard" className="flex items-center gap-2">
               <FaShieldAlt className="w-6 h-6 text-accent" />
               <span className="text-white font-bebas text-xl tracking-wider">
-                Vicmart Admin
+                Adenola & Sons Admin
               </span>
             </Link>
           )}

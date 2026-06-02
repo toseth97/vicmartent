@@ -56,10 +56,10 @@ export default function AdminLoginPage() {
             <FaShieldAlt className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-5xl font-bebas text-white tracking-wider mb-4">
-            Vicmart Admin
+            Adenola & Sons Admin
           </h1>
           <p className="text-gray-300 text-lg max-w-sm mx-auto">
-            Secure administration portal for managing Vicmart Enterprises
+            Secure administration portal for managing Adenola & Sons
             website content and operations.
           </p>
           <div className="mt-8 flex items-center justify-center gap-6 text-white/40 text-sm">
@@ -83,7 +83,7 @@ export default function AdminLoginPage() {
               <FaShieldAlt className="w-8 h-8 text-accent" />
             </div>
             <h1 className="text-3xl font-bebas text-primary tracking-wider">
-              Vicmart Admin
+              Adenola & Sons Admin
             </h1>
           </div>
 

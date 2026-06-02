@@ -64,13 +64,13 @@ const AboutContent = () => {
             <div className="grid md:grid-cols-2 gap-10 py-16 w-full test-sm text-gray-700">
                 <div>
                     <p>
-                        Vicmart Enterprises Limited is an indigenous firm
+                        Adenola & Sons is an indigenous firm
                         involved in the marketing and sales of FMCG (fast moving
                         consumer goods) and other allied products to meet the
                         needs of our customers.
                     </p>
                     <p className="mt-4">
-                        At Vicmart, we strive to create and sustain mutually
+                        At Adenola & Sons, we strive to create and sustain mutually
                         profitable relationships between us and all our
                         customers through our culture of providing quality
                         products, responsive sales services, integrity, and an
@@ -108,7 +108,7 @@ const AboutContent = () => {
                         Company History
                     </h2>
                     <p className="text-gray-700">
-                        Vicmart Enterprises Limited was founded with a vision to
+                        Adenola & Sons was founded with a vision to
                         become a leading distribution company in Nigeria. Our
                         journey began with a commitment to quality products and
                         exceptional service delivery, and we have grown steadily

@@ -51,7 +51,7 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2003", title: "Company Founded", description: "Vicmart Enterprises Limited was established in Lagos, Nigeria." },
+  { year: "2003", title: "Company Founded", description: "Adenola & Sons was established in Lagos, Nigeria." },
   { year: "2006", title: "First Major Partnership", description: "Secured distribution partnership with Mars International." },
   { year: "2010", title: "National Expansion", description: "Expanded operations to 8 branches across Nigeria." },
   { year: "2014", title: "Manufacturing Division", description: "Launched manufacturing capabilities for local product lines." },
@@ -100,7 +100,7 @@ export default function AboutPage() {
       <section className="relative h-[50vh] min-h-[400px] overflow-hidden">
         <Image
           src="/assets/images/abt1.jpg"
-          alt="About Vicmart"
+          alt="About Adenola & Sons"
           fill
           className="object-cover"
           priority
@@ -131,7 +131,7 @@ export default function AboutPage() {
                 <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src="/assets/images/forklift.jpg"
-                    alt="Vicmart Operations"
+                    alt="Adenola & Sons Operations"
                     fill
                     className="object-cover"
                   />
@@ -152,12 +152,12 @@ export default function AboutPage() {
               </h2>
               <div className="section-divider mb-6" />
               <p className="text-gray-600 leading-relaxed mb-4">
-                Vicmart Enterprises Limited is an indigenous firm involved in the
+                Adenola & Sons is an indigenous firm involved in the
                 marketing and sales of FMCG (fast moving consumer goods) and
                 other allied products to meet the needs of our customers.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                At Vicmart, we strive to create and sustain mutually profitable
+                At Adenola & Sons, we strive to create and sustain mutually profitable
                 relationships between us and all our customers through our
                 culture of providing quality products, responsive sales services,
                 integrity, and an ample mix of human resources and technology.

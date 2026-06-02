@@ -35,13 +35,13 @@ interface SiteSettings {
 }
 
 const defaultSettings: SiteSettings = {
-  siteName: "Vicmart Enterprises Limited",
+  siteName: "Adenola & Sons",
   tagline: "Distributing Superior Products & Services",
   description:
     "An indigenous firm involved in the marketing and sales of FMCG and other allied products.",
   address: "Block C, Plot 2, Oluyole Extension, Oluyole, Ibadan.",
   phone: "+234-80-5509-6909",
-  email: "enquiries@vicmartent.com",
+  email: "enquiries@adenolaandsons.com",
   twitterUrl: "#",
   facebookUrl: "#",
   instagramUrl: "#",

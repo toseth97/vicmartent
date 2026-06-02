@@ -1,6 +1,6 @@
-# Vicmart Enterprises Limited - Official Website
+# Adenola & Sons - Official Website
 
-A modern, secure, and responsive website for Vicmart Enterprises Limited built with **Next.js 16**, **TypeScript**, **MongoDB**, and **Tailwind CSS**.
+A modern, secure, and responsive website for Adenola & Sons built with **Next.js 16**, **TypeScript**, **MongoDB**, and **Tailwind CSS**.
 
 ## 🚀 Features
 
@@ -62,8 +62,8 @@ A modern, secure, and responsive website for Vicmart Enterprises Limited built w
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/toseth97/vicmartent.git
-   cd vicmartent
+   git clone https://github.com/toseth97/adenolaandsons.git
+   cd adenolaandsons
    ```
 
 2. **Install dependencies:**
@@ -78,7 +78,7 @@ A modern, secure, and responsive website for Vicmart Enterprises Limited built w
    
    Edit `.env.local` with your values:
    ```env
-   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/vicmart?retryWrites=true&w=majority
+   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/adenolaandsons?retryWrites=true&w=majority
    NEXTAUTH_SECRET=your-very-long-random-secret-string-at-least-32-chars
    NEXTAUTH_URL=http://localhost:3000
    ADMIN_EMAIL=admin@vic.com
@@ -182,8 +182,8 @@ Configured via security headers to prevent XSS, clickjacking, and data injection
 
 ## 📝 License
 
-Proprietary - Vicmart Enterprises Limited
+Proprietary - Adenola & Sons
 
 ## 👨‍💻 Development
 
-Built with ❤️ for Vicmart Enterprises Limited
+Built with ❤️ for Adenola & Sons

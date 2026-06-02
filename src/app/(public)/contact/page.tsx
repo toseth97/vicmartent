@@ -29,7 +29,7 @@ const contactInfo = [
   {
     icon: FaEnvelope,
     title: "Email",
-    lines: ["info@vicmart.com", "support@vicmart.com"],
+    lines: ["info@adenolaandsons.com", "support@adenolaandsons.com"],
   },
   {
     icon: FaClock,

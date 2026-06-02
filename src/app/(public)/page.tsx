@@ -129,7 +129,7 @@ export default function HomePage() {
           >
             <Image
               src={heroSlides[currentSlide].image}
-              alt="Vicmart Enterprises"
+              alt="Adenola & Sons"
               fill
               className="object-cover"
               priority
@@ -217,7 +217,7 @@ export default function HomePage() {
                 <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src="/assets/images/forklift.jpg"
-                    alt="Vicmart Operations"
+                    alt="Adenola & Sons Operations"
                     fill
                     className="object-cover"
                   />
@@ -238,12 +238,12 @@ export default function HomePage() {
               </h2>
               <div className="section-divider mb-6" />
               <p className="text-gray-600 leading-relaxed mb-4">
-                Vicmart Enterprises Limited is an indigenous firm involved in the
+                Adenola & Sons is an indigenous firm involved in the
                 marketing and sales of FMCG (fast moving consumer goods) and
                 other allied products to meet the needs of our customers.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                At Vicmart, we strive to create and sustain mutually profitable
+                At Adenola & Sons, we strive to create and sustain mutually profitable
                 relationships between us and all our customers through our
                 culture of providing quality products, responsive sales services,
                 integrity, and an ample mix of human resources and technology.

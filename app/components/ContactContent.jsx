@@ -47,7 +47,7 @@ export default function ContactContent() {
                             <span className="mb-4 text-sm">
                                 <strong>Email:</strong>
 
-                                <p>enquiries@vicmartent.com</p>
+                                <p>enquiries@adenolaandsons.com</p>
                                 <br />
                             </span>
 

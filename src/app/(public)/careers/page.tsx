@@ -94,7 +94,7 @@ export default function CareersPage() {
       <section className="relative h-[50vh] min-h-[400px] overflow-hidden">
         <Image
           src="/assets/images/milestone.png"
-          alt="Careers at Vicmart"
+          alt="Careers at Adenola & Sons"
           fill
           className="object-cover"
           priority
@@ -122,14 +122,14 @@ export default function CareersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <span className="text-accent font-medium text-sm tracking-widest uppercase">
-              Why Vicmart
+              Why Adenola & Sons
             </span>
             <h2 className="text-4xl font-bebas text-primary mt-3 mb-4 tracking-wide">
               Why Work With Us
             </h2>
             <div className="section-divider mx-auto mb-6" />
             <p className="text-gray-600 max-w-2xl mx-auto">
-              At Vicmart Enterprises, we believe our people are our greatest
+              At Adenola & Sons, we believe our people are our greatest
               asset. We create an environment where talent thrives, ideas
               flourish, and careers grow.
             </p>
