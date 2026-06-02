@@ -11,7 +11,6 @@ const CareerHero = ({ props }) => {
             badgeText="Join Our Team"
             title={props ? props : "Careers"}
             subtitle="Build your career in a fast-growing distribution company. Explore roles and opportunities with Adenola & Sons."
-            ctaPrimary={{ href: "/careers", label: "View Vacancies" }}
             ctaSecondary={{ href: "/contact", label: "Contact HR" }}
             showStats={false}
         />
