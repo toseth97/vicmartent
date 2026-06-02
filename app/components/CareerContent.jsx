@@ -64,11 +64,7 @@ const CareerContent = () => {
                                 management
                             </li>
                         </ul>
-                        <p className="opacity-80 text-sm mt-4">
-                            If you believe you have what it takes to work with
-                            us, send your CV to{" "}
-                            <strong>careers@vicmartent.com</strong>
-                        </p>
+                        
                     </div>
                 </div>
             </div>

@@ -50,13 +50,7 @@ const services = [
       "Nationwide distribution network ensuring products reach every corner of Nigeria with efficiency and reliability.",
     href: "/distribution",
   },
-  {
-    icon: FaIndustry,
-    title: "Manufacturing",
-    description:
-      "State-of-the-art manufacturing facilities producing quality consumer goods that meet international standards.",
-    href: "/manufacturing",
-  },
+  
   {
     icon: FaHandshake,
     title: "Partnerships",

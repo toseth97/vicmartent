@@ -35,7 +35,7 @@ const ProductHero = () => {
                     animate={{ x: 0, opacity: 1 }}
                     exit={{ x: 100, opacity: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className={`lg:text-6xl tracking-wide text-4xl font-bold text-white capitalize text-center ${bebas.className}`}
+                    className={`lg:text-7xl tracking-widest text-4xl font-bold text-white uppercase text-center ${bebas.className}`}
                 >
                     OUR PRODUCTS
                 </motion.h1>

@@ -1,12 +1,12 @@
 "use client";
-import { Bebas_Neue } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Image from "next/image";
 import Hero from "../components/Hero";
 import Home_introduction from "../components/Home_introduction";
 import { useEffect, useRef } from "react";
 import "../globals.css";
 
-const bebas = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
+const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
 
 export default function Home() {
     const hiddenElementsRef = useRef([]); // Use useRef for element references
@@ -35,7 +35,7 @@ export default function Home() {
 
     return (
         <main
-            className={`flex flex-col items-center justify-center overflow-x-hidden ${bebas.className}`}
+            className={`flex flex-col items-center justify-center overflow-x-hidden ${poppins.className}`}
         >
             <Hero />
             <Home_introduction />

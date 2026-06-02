@@ -77,7 +77,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary-950/90 via-primary-900/70 to-transparent"></div>
 
             {/* Content Container */}
-            <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 w-full flex items-center justify-center h-full">
+            <div className="relative z-10 mx-auto px-4 lg:px-8 w-full flex items-center justify-center h-full">
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"

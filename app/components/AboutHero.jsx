@@ -36,9 +36,9 @@ const AboutHero = () => {
                     animate={{ x: 0, opacity: 1 }}
                     exit={{ x: 100, opacity: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className="lg:text-6xl tracking-widest text-3xl font-bold text-white capitalize text-center"
+                    className="lg:text-6xl  text-3xl font-bold text-white capitalize text-center"
                 >
-                    About Vicmart Enterprises Limited
+                    About <br/> <span className="mt-8 inline-block"> Vicmart Enterprises Limited</span>
                 </motion.h1>
             </div>
         </section>
