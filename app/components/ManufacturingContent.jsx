@@ -29,15 +29,10 @@ const ManufacturingContent = () => {
                                 </h2>
                             </div>
                             <p className="text-gray-700 mb-4">
-                                AAVA Brand's transition into the manufacturing
-                                domain was part of its overall strategy and
-                                vision of backward integration.
+                                We are passionate about quality product and selfless service delivery, distributing superior products and services that improves the life of consumers.
                             </p>
                             <p className="text-gray-700">
-                                Kick started in the year 2003, the vision behind
-                                this foray was the commitment to serve our
-                                customers with the best quality products made
-                                available at an arm's length.
+                                Our commitment to excellence drives us to provide quality products and responsive sales services that meet the evolving needs of our customers. We believe in creating mutually profitable relationships and practicing ethical business conduct in all our operations.
                             </p>
                         </div>
 

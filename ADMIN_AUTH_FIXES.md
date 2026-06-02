@@ -92,7 +92,7 @@
     - Login to admin dashboard
     - Go to "Admins" tab
     - Click "Add New Admin"
-    - Fill in email (must end with @aavabrands.com) and password
+    - Fill in email (must end with @vicmartent.com) and password
     - Submit the form
     - Verify no "Unauthorized" error appears
 

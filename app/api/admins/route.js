@@ -54,9 +54,9 @@ export async function POST(request) {
         const { email, password } = await request.json();
 
         // Validate email domain for non-default admins
-        if (!email.endsWith("@aavabrands.com")) {
+        if (!email.endsWith("@vicmartent.com")) {
             return NextResponse.json(
-                { error: "Admin email must end with @aavabrands.com" },
+                { error: "Admin email must end with @vicmartent.com" },
                 { status: 400 },
             );
         }

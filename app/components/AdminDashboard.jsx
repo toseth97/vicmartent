@@ -487,10 +487,10 @@ export default function AdminDashboard() {
                                                     })
                                                 }
                                                 className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
-                                                placeholder="admin@aavabrands.com"
+                                                placeholder="admin@vicmartent.com"
                                             />
                                             <p className="text-xs text-gray-500 mt-1">
-                                                Must end with @aavabrands.com
+                                                Must end with @vicmartent.com
                                             </p>
                                         </div>
                                         <div className="sm:col-span-2">

@@ -1,169 +1,201 @@
 "use client";
-import { Poppins } from "next/font/google";
 import React from "react";
 import ForkLift from "../assets/images/forklift.jpg";
 import Distribution from "../assets/images/distribution.webp";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { MdOpenInNew as FaExternalLink } from "react-icons/md";
-
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700"] });
+import { MdArrowRight, MdOpenInNew } from "react-icons/md";
 
 const Home_introduction = () => {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 0.1,
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6, ease: "easeOut" },
+        },
+    };
+
     return (
-        <section
-            className={`w-[100vw] overflow-hidden flex items-center justify-center flex-col bg-white home_intro ${poppins.className}`}
-        >
-            <div className="w-4/5 flex lg:flex-row flex-col items-center lg:justify-between lg:gap-16 gap-4 justify-center">
+        <section className="w-full overflow-hidden bg-white">
+            {/* About Section */}
+            <div className="section-padding section-container">
                 <motion.div
-                    initial={{ opacity: 0, x: -100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 100 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
-                    className="text-justify text-sm opacity-80 lg:w-4/6 w-full"
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
                 >
-                    <p className="my-2 opacity-80 preview_hidden">
-                        Vicmart Enterprises Limited is an indigenous firm
-                        involved in the marketing and sales of FMCG (fast moving
-                        consumer goods) and other allied products to meet the
-                        needs of our customers.
-                    </p>
-                    <p className="my-2 opacity-80 preview_hidden">
-                        At Vicmart, we strive to create and sustain mutually
-                        profitable relationships between us and all our
-                        customers through our culture of providing quality
-                        products, responsive sales services, integrity, and an
-                        ample mix of human resources and technology.
-                    </p>
-                    <p className="my-2 opacity-80 preview_hidden">
-                        With our multi-disciplinary team of young innovative
-                        personnel, we are poised to become one of the leading
-                        distribution firms in Nigeria.
-                    </p>
-                    <p className="my-2 opacity-80 preview_hidden">
-                        We are passionate about quality product and selfless
-                        service delivery, distributing superior products and
-                        services that improves the life of consumers.
-                    </p>
-                </motion.div>
-                <motion.div
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
-                    className="lg:w-3/6 w-full rounded-xl mx-auto flex justify-center"
-                >
-                    <Image
-                        src={ForkLift}
-                        alt="forklift"
-                        className="object-fit-cover h-auto w-full rounded-xl preview_hidden"
-                        fill={false}
-                    />
+                    {/* Text Content */}
+                    <motion.div variants={itemVariants} className="space-y-6">
+                        <div>
+                            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                                About Vicmart Enterprises
+                            </h2>
+                            <div className="w-12 h-1 bg-gradient-to-r from-primary-600 to-primary-500 rounded-full"></div>
+                        </div>
+
+                        <div className="space-y-4 text-gray-700 leading-relaxed">
+                            <p>
+                                Vicmart Enterprises Limited is an indigenous firm involved in the marketing and sales of FMCG (fast moving consumer goods) and other allied products to meet the needs of our customers.
+                            </p>
+                            <p>
+                                At Vicmart, we strive to create and sustain mutually profitable relationships between us and all our customers through our culture of providing quality products, responsive sales services, integrity, and an ample mix of human resources and technology.
+                            </p>
+                            <p>
+                                With our multi-disciplinary team of young innovative personnel, we are poised to become one of the leading distribution firms in Nigeria.
+                            </p>
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                            <Link href="/about" className="btn-primary inline-flex items-center justify-center gap-2 group">
+                                Learn More
+                                <MdArrowRight className="group-hover:translate-x-1 transition-transform" />
+                            </Link>
+                            <Link href="/contact" className="btn-secondary inline-flex items-center justify-center gap-2">
+                                Get in Touch
+                            </Link>
+                        </div>
+                    </motion.div>
+
+                    {/* Image */}
+                    <motion.div
+                        variants={itemVariants}
+                        className="relative overflow-hidden rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300"
+                    >
+                        <Image
+                            src={ForkLift}
+                            alt="Vicmart Operations"
+                            className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </motion.div>
                 </motion.div>
             </div>
 
-            <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -100 }}
-                transition={{ duration: 0.5 }}
-                className=" overflow-hidden relative flex items-center justify-center view_more_btn mt-8"
-            >
-                <Link
-                    href=""
-                    className="py-2 px-16 border-2 rounded border-indigo-950 text-sm z-10 font-semibold"
+            {/* Our Business Section */}
+            <div className="section-padding section-container bg-gradient-subtle">
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    className="space-y-12"
                 >
-                    View More
-                </Link>
-                <div className="w-[35rem] h-16 bg-indigo-950 absolute"></div>
-            </motion.div>
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-full mt-4 py-8 py-4 business_section flex flex-col items-center justify-center "
-            >
-                <div className="flex flex-col items-center justify-center w-4/5">
-                    <h1 className="font-bold text-center lg:text-3xl text-2xl py-2 mb-4 preview_hidden">
-                        Our Business
-                    </h1>
-                    <p className="text-sm opacity-80 text-justify lg:text-center preview_hidden">
-                        We work in every major area of development. We provide a
-                        wide array of consumer products and share and apply
-                        innovative knowledge and solutions to the needs of our
-                        suppliers and consumers. We are committed to delivering
-                        superior products and services that improve the lives of
-                        consumers.
-                    </p>
-                    <div className="flex lg:flex-row flex-col items-center lg:justify-between justify-center w4/5 lg:gap-16 gap-8 my-8 preview_hidden">
-                        {/* <motion.div
-                            initial={{ opacity: 0, x: -100 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: 100 }}
-                            transition={{ duration: 0.5, delay: 0.5 }}
-                            className="lg:w-3/6 w-full rounded-xl mx-auto flex justify-center overflow-hidden preview_hidden"
-                        >
-                            <Image
-                                src={Manufacture}
-                                alt="manufacture"
-                                className="object-fit-cover h-auto w-full rounded-xl hover:scale-125 duration-700"
-                                fill={false}
-                            />
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, x: 100 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: -100 }}
-                            transition={{ duration: 0.5, delay: 0.5 }}
-                            className="lg:w-3/6 w-full rounded-xl mx-auto flex justify-center overflow-hidden"
-                        >
-                            <Image
-                                src={Distribution}
-                                alt="distribution"
-                                className="object-fit-cover h-auto w-full rounded-xl hover:scale-125 duration-700"
-                                fill={false}
-                            />
-                        </motion.div> */}
-                        <motion.div
-                            initial={{ opacity: 0, x: 100 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: -100 }}
-                            transition={{ duration: 0.5, delay: 0.5 }}
-                            className="portfolio-wrap relative overflow-hidden rounded-lg shadow-md"
-                        >
-                            <Image
-                                src={Distribution} // Placeholder
-                                alt="Distribution"
-                                width={400}
-                                height={300}
-                                className="img-fluid w-full h-64 o"
-                            />
-                            <div className="portfolio-info absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                                <div className="portfolio-links">
-                                    <Link
-                                        href="/distribution"
-                                        title="More Details"
-                                        className="text-white"
-                                    >
-                                        <FaExternalLink className="text-6xl text-bold" />
-                                    </Link>
-                                </div>
+                    {/* Section Header */}
+                    <motion.div variants={itemVariants} className="text-center max-w-3xl mx-auto">
+                        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                            Our Business Vision
+                        </h2>
+                        <p className="text-lg text-gray-700 leading-relaxed">
+                            We work in every major area of development. We provide a wide array of consumer products and share and apply innovative knowledge and solutions to the needs of our suppliers and consumers.
+                        </p>
+                    </motion.div>
+
+                    {/* Business Content Card */}
+                    <motion.div
+                        variants={itemVariants}
+                        className="card p-8 lg:p-12"
+                    >
+                        <div className="space-y-6">
+                            <p className="text-gray-700 leading-relaxed text-lg">
+                                Vicmart Enterprises Limited is a multi-faceted company distributing products that touch the lives of our consumers. Customer commitment and loyalty is paramount for our long-term success. We are committed to providing quality products and responsive sales services that meet the evolving needs of our customers.
+                            </p>
+
+                            {/* Core Values Grid */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8">
+                                <motion.div
+                                    variants={itemVariants}
+                                    className="flex gap-4 items-start"
+                                >
+                                    <div className="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
+                                        <div className="w-2 h-2 rounded-full bg-primary-600"></div>
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-900 mb-2">Quality Products</h3>
+                                        <p className="text-sm text-gray-600">Delivering superior goods that improve customer lives</p>
+                                    </div>
+                                </motion.div>
+
+                                <motion.div
+                                    variants={itemVariants}
+                                    className="flex gap-4 items-start"
+                                >
+                                    <div className="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
+                                        <div className="w-2 h-2 rounded-full bg-primary-600"></div>
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-900 mb-2">Responsive Service</h3>
+                                        <p className="text-sm text-gray-600">Quick and reliable customer support and sales</p>
+                                    </div>
+                                </motion.div>
+
+                                <motion.div
+                                    variants={itemVariants}
+                                    className="flex gap-4 items-start"
+                                >
+                                    <div className="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
+                                        <div className="w-2 h-2 rounded-full bg-primary-600"></div>
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-900 mb-2">Integrity First</h3>
+                                        <p className="text-sm text-gray-600">Operating with honesty in all business dealings</p>
+                                    </div>
+                                </motion.div>
+
+                                <motion.div
+                                    variants={itemVariants}
+                                    className="flex gap-4 items-start"
+                                >
+                                    <div className="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
+                                        <div className="w-2 h-2 rounded-full bg-primary-600"></div>
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-900 mb-2">Innovation</h3>
+                                        <p className="text-sm text-gray-600">Leveraging technology and talented personnel</p>
+                                    </div>
+                                </motion.div>
                             </div>
-                        </motion.div>
-                    </div>
-                    <p className="text-sm opacity-80 lg:text-center text-justify lg:p-16 p-6 bg-white text-indigo-950 preview_hidden">
-                        Vicmart Enterprises Limited is a multi-faceted company
-                        distributing products that touch the lives of our
-                        Holding consumers&apos;
-                        commitment and loyalty is paramount for our long-term
-                        success. We are committed to providing quality products
-                        and responsive sales services that meet the evolving
-                        needs of our customers.
-                    </p>
-                </div>
-            </motion.div>
+                        </div>
+                    </motion.div>
+
+                    {/* Distribution Showcase */}
+                    <motion.div
+                        variants={itemVariants}
+                        className="relative overflow-hidden rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 group"
+                    >
+                        <Image
+                            src={Distribution}
+                            alt="Distribution Network"
+                            width={800}
+                            height={400}
+                            className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent flex items-center justify-center">
+                            <Link
+                                href="/distribution"
+                                className="btn-white inline-flex items-center gap-2 group/btn"
+                            >
+                                Explore Our Distribution
+                                <MdArrowRight className="group-hover/btn:translate-x-1 transition-transform" />
+                            </Link>
+                        </div>
+                    </motion.div>
+                </motion.div>
+            </div>
         </section>
     );
 };

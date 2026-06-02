@@ -22,29 +22,17 @@ export default function ContactContent() {
         <div className={`w-full ${poppins.className}`}>
             {/* Contact Section */}
             <motion.section
-                className="bg-gray-100 py-16"
-                initial={{ opacity: 0, y: 100 }}
+                className="py-16"
+                initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, x: 100 }}
-                transition={{ duration: 0.7, delay: 0.5 }}
+                exit={{ opacity: 0, x: 20 }}
+                transition={{ duration: 0.6, delay: 0.15 }}
             >
+
                 <div className="container mx-auto px-6 preview_hidden">
                     <div className="grid md:grid-cols-2 gap-10">
                         {/* Left Info */}
                         <div className="bg-white p-8 shadow rounded border border-gray-200">
-                            <div className="mb-6 text-center">
-                                <p className="text-gray-800 font-semibold">
-                                    If you see or suspect wrongdoing &gt;&gt;
-                                    <a
-                                        href="https://aavabrands.com/images/uploads/Nigeria%20-%20English-1.pdf"
-                                        target="_blank"
-                                        className="text-blue-600 block mt-2"
-                                    >
-                                        Click
-                                    </a>
-                                </p>
-                            </div>
-
                             <p className="text-2xl font-bold mb-6 text-center">
                                 Contact Us
                             </p>
@@ -75,7 +63,7 @@ export default function ContactContent() {
                         <div className="bg-white p-8 shadow rounded border border-gray-200">
                             <form
                                 method="POST"
-                                action="https://www.aavabrands.com/contact"
+                                action="#"
                                 className="space-y-4"
                             >
                                 <input

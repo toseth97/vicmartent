@@ -2,10 +2,11 @@
 import React from "react";
 import Home_Image_1 from "../assets/images/Home_Image.jpg";
 import Home_Image_2 from "../assets/images/Home_Image_2.jpg";
-import "../assets/css/Hero.css";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { FiArrowRight } from "react-icons/fi";
 
 const Hero = () => {
     const hero_data = [Home_Image_1, Home_Image_2];
@@ -13,7 +14,7 @@ const Hero = () => {
     const [key, setKey] = useState(0);
 
     useEffect(() => {
-        const lastIndex = (hero_data.length = 1);
+        const lastIndex = hero_data.length - 1;
 
         if (index < 0) {
             setIndex(lastIndex);
@@ -25,55 +26,139 @@ const Hero = () => {
 
     useEffect(() => {
         const change = setInterval(() => {
-            setIndex(index + 1);
+            setIndex((prevIndex) => prevIndex + 1);
             setKey((prevKey) => prevKey + 1);
         }, 10000);
         return () => clearInterval(change);
-    }, [index]);
+    }, []);
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 0.3,
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.8, ease: "easeOut" },
+        },
+    };
 
     return (
-        <section className="w-[100vw] lg:h-[90vh] h-[60vh] hero flex flex-col items-center justify-center overflow-hidden relative">
-            <div className="w-full lg:h-full h-[60vh] shade absolute top-0 "></div>
-            <motion.div
-                key={key}
-                layout
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}
-                className="w-full"
-            >
-                {hero_data[index] && (
+        <section className="w-full min-h-screen lg:h-screen hero flex flex-col items-center justify-center overflow-hidden relative pt-20">
+            {/* Background Images */}
+            {hero_data[index] && (
+                <motion.div
+                    key={key}
+                    initial={{ opacity: 0, scale: 1.05 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1.5 }}
+                    className="absolute inset-0"
+                >
                     <Image
                         src={hero_data[index]}
-                        alt="warehouse"
-                        className="hero_image w-full object-fit-cover lg:h-full h-[60vh] absolute top-0"
-                        width={1920}
-                        height={1080}
+                        alt="Enterprise solutions"
+                        className="w-full h-full object-cover"
+                        priority
                     />
-                )}
-            </motion.div>
+                </motion.div>
+            )}
 
-            <div className="lg:w-9/12 w-11/12 z-10">
-                <motion.h1
-                    key={key}
-                    initial={{ x: -40, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: 100, opacity: 0 }}
-                    transition={{ duration: 1, delay: 1 }}
-                    className="lg:text-6xl text-3xl tracking-widest font-bold text-white capitalize text-center "
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-950/90 via-primary-900/70 to-transparent"></div>
+
+            {/* Content Container */}
+            <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 w-full flex items-center justify-center h-full">
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="w-full lg:w-1/2 py-20 lg:py-0 flex flex-col justify-center"
                 >
-                    We Distribute Superior Products and Services that Improves
-                    the Life of Consumers
-                </motion.h1>
+                    {/* Badge */}
+                    <motion.div variants={itemVariants}>
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full w-fit mb-6">
+                            <div className="w-2 h-2 bg-secondary-400 rounded-full"></div>
+                            <span className="text-sm font-semibold text-white">Leading Distribution Solutions</span>
+                        </div>
+                    </motion.div>
+
+                    {/* Main Heading */}
+                    <motion.h1 variants={itemVariants} className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                        Distribute Superior Products & Services
+                    </motion.h1>
+
+                    {/* Subheading */}
+                    <motion.p
+                        variants={itemVariants}
+                        className="text-lg lg:text-xl text-white/90 mb-8 max-w-lg leading-relaxed"
+                    >
+                        We improve lives through premium consumer goods and trusted distribution networks across multiple channels.
+                    </motion.p>
+
+                    {/* CTA Buttons */}
+                    <motion.div
+                        variants={itemVariants}
+                        className="flex flex-col sm:flex-row gap-4"
+                    >
+                        <Link
+                            href="/about"
+                            className="btn-primary inline-flex items-center justify-center gap-2 group"
+                        >
+                            Learn More
+                            <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                        <Link
+                            href="/contact"
+                            className="px-8 py-3 bg-white text-primary-900 font-semibold rounded-lg transition-all duration-300 hover:bg-gray-100 hover:shadow-lg active:scale-95"
+                        >
+                            Get in Touch
+                        </Link>
+                    </motion.div>
+
+                    {/* Stats */}
+                    <motion.div
+                        variants={itemVariants}
+                        className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/20"
+                    >
+                        <div>
+                            <div className="text-3xl font-bold text-white">15+</div>
+                            <div className="text-sm text-white/70">Years Experience</div>
+                        </div>
+                        <div>
+                            <div className="text-3xl font-bold text-white">5K+</div>
+                            <div className="text-sm text-white/70">Happy Customers</div>
+                        </div>
+                        <div>
+                            <div className="text-3xl font-bold text-white">50+</div>
+                            <div className="text-sm text-white/70">Locations</div>
+                        </div>
+                    </motion.div>
+                </motion.div>
             </div>
 
+            {/* Scroll Indicator */}
             <motion.div
-                initial={{ y: 1000 }}
-                animate={{ y: -40 }}
-                transition={{ duration: 1 }}
-                className="oval absolute lg:bottom-[-10rem] bottom-[-5rem]  w-[140%] lg:h-[40vh] h-[15vh] bg-white  mx-auto "
-            ></motion.div>
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+            >
+                <div className="flex flex-col items-center gap-2">
+                    <span className="text-sm text-white/70">Scroll to explore</span>
+                    <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-center justify-center">
+                        <div className="w-1 h-2 bg-white rounded-full"></div>
+                    </div>
+                </div>
+            </motion.div>
         </section>
     );
 };

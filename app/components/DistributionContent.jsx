@@ -19,15 +19,7 @@ const DistributionContent = () => {
                     </h2>
                 </div>
                 <p className="text-center max-w-4xl mx-auto mb-16 text-gray-700 leading-relaxed">
-                    Started as a trading company over 125 years ago, AAVA Brands
-                    Ltd has today diversified into Distribution, Manufacturing,
-                    Retail & Exports with a wide product range of products in
-                    various categories – Snacks, Dairy Products, Beverages,
-                    Spices, Personal Care & More. We partner with clients on a
-                    global scale to serve consumers, through our unmatched
-                    distribution network in the region and profound market
-                    knowledge, we provide all the essential services that help
-                    brands grow in Africa.
+                    Vicmart Enterprises Limited is an indigenous firm involved in the marketing and sales of FMCG (fast moving consumer goods) and other allied products. With our multi-disciplinary team of young innovative personnel, we are poised to become one of the leading distribution firms in Nigeria. We provide all the essential distribution services and logistics support to help brands reach consumers effectively across our network.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 portfolio-container">
