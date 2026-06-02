@@ -93,7 +93,7 @@ export default function CareersPage() {
       {/* Hero Section */}
       <section className="relative h-[50vh] min-h-[400px] overflow-hidden">
         <Image
-          src="/assets/images/aavanew1.jpg"
+          src="/assets/images/milestone.png"
           alt="Careers at Vicmart"
           fill
           className="object-cover"
@@ -338,7 +338,7 @@ export default function CareersPage() {
       <section className="py-20 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <Image
-            src="/assets/images/aavanew1.jpg"
+            src="/assets/images/milestone.png"
             alt=""
             fill
             className="object-cover"

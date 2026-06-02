@@ -338,7 +338,7 @@ export default function AboutPage() {
                   <div className="bg-white rounded-2xl overflow-hidden card-hover group">
                     <div className="relative h-72 overflow-hidden">
                       <Image
-                        src={director.imageUrl || "/assets/images/aavanew1.jpg"}
+                        src={director.imageUrl || "/assets/images/milestone.png"}
                         alt={director.name}
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-700"

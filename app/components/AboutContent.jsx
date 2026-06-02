@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Milestone1 from "../assets/images/milestone.png";
-import Milestone2 from "../assets/images/aavanew1.jpg";
+import Milestone2 from "../assets/images/milestone.png";
 
 const AboutContent = () => {
     return (
