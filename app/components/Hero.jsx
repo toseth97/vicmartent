@@ -93,14 +93,14 @@ const Hero = () => {
                     </motion.div>
 
                     {/* Main Heading */}
-                    <motion.h1 variants={itemVariants} className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                    <motion.h1 variants={itemVariants} className="text-4xl lg:text-6xl font-bold text-white mb-4 leading-tight">
                         Distribute Superior Products & Services
                     </motion.h1>
 
                     {/* Subheading */}
                     <motion.p
                         variants={itemVariants}
-                        className="text-lg lg:text-xl text-white/90 mb-8 max-w-lg leading-relaxed"
+                        className="text-lg lg:text-xl text-white/90 mb-4 max-w-lg leading-relaxed"
                     >
                         We improve lives through premium consumer goods and trusted distribution networks across multiple channels.
                     </motion.p>
@@ -128,7 +128,7 @@ const Hero = () => {
                     {/* Stats */}
                     <motion.div
                         variants={itemVariants}
-                        className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/20"
+                        className="grid grid-cols-3 gap-6 mt-2 pt-2 pb-16 border-t border-white/20"
                     >
                         <div>
                             <div className="text-3xl font-bold text-white">15+</div>
@@ -150,7 +150,7 @@ const Hero = () => {
             <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+                className=" absolute bottom-8 w-full transform -translate-x-1/2 z-10"
             >
                 <div className="flex flex-col items-center gap-2">
                     <span className="text-sm text-white/70">Scroll to explore</span>
