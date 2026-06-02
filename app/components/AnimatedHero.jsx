@@ -162,7 +162,7 @@ return (
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
       >
         <div className="flex flex-col items-center gap-2">
           <span className="text-sm text-white/70">Scroll to explore</span>
