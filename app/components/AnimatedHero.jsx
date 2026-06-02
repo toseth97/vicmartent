@@ -5,6 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
 
 /**
  * Reusable hero component to match app/components/Hero.jsx (homepage)
@@ -58,8 +61,8 @@ const AnimatedHero = ({
     },
   };
 
-  return (
-    <section className="w-full min-h-screen lg:h-screen hero flex flex-col items-center justify-center overflow-hidden relative pt-20">
+return (
+    <section className={`w-full min-h-screen lg:h-screen hero flex flex-col items-center justify-center overflow-hidden relative pt-20 ${poppins.className}`}>
       {/* Background Images */}
       {heroImages?.[index] && (
         <motion.div
